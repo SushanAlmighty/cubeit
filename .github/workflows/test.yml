@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Setup Python
-      - uses: actions/setup-python@v4
+        uses: actions/setup-python@v4
         with:
           python-version: '3.12'
 
@@ -23,8 +23,8 @@ jobs:
 
       - name: Run tests
         run: |
-        cd cubeit
-        python -m http.server 8000 &
-        cd ..
-        pytest -v 
+          cd cubeit
+          python -m http.server 8000 &
+          cd ..
+          pytest -v 
         
